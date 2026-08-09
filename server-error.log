@@ -1,0 +1,18 @@
+ ⨯ [Error: EBUSY: resource busy or locked, open 'C:\Users\Hp\OneDrive\Documents\new folder\fitsraj\.next\react-loadable-manifest.json'] {
+  errno: -4082,
+  code: 'EBUSY',
+  syscall: 'open',
+  path: 'C:\\Users\\Hp\\OneDrive\\Documents\\new folder\\fitsraj\\.next\\react-loadable-manifest.json'
+}
+[Error: EBUSY: resource busy or locked, open 'C:\Users\Hp\OneDrive\Documents\new folder\fitsraj\.next\react-loadable-manifest.json'] {
+  errno: -4082,
+  code: 'EBUSY',
+  syscall: 'open',
+  path: 'C:\\Users\\Hp\\OneDrive\\Documents\\new folder\\fitsraj\\.next\\react-loadable-manifest.json'
+}
+[Error: EBUSY: resource busy or locked, open 'C:\Users\Hp\OneDrive\Documents\new folder\fitsraj\.next\react-loadable-manifest.json'] {
+  errno: -4082,
+  code: 'EBUSY',
+  syscall: 'open',
+  path: 'C:\\Users\\Hp\\OneDrive\\Documents\\new folder\\fitsraj\\.next\\react-loadable-manifest.json'
+}

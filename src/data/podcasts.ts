@@ -1,0 +1,48 @@
+import { PodcastEpisode } from "@/types";
+
+export const podcastEpisodes: PodcastEpisode[] = [
+  {
+    id: "ep1-ai-future-nepal",
+    title: "AI and the Future of Nepal",
+    titleNe: "AI र नेपालको भविष्य",
+    description: "Discussing how AI will transform Nepal's education and economy.",
+    descriptionNe: "AI ले नेपालको शिक्षा र अर्थतन्त्रलाई कसरी रूपान्तरण गर्छ भन्ने बारेमा छलफल।",
+    category: "AI Learners",
+    duration: "25 min",
+    date: "2026-01-15",
+    audioUrl: "#",
+  },
+  {
+    id: "ep2-fitness-journey",
+    title: "Fitness Journey of a Nepali Youth",
+    titleNe: "नेपाली युवाको Fitness यात्रा",
+    description: "Inspiring story of a young Nepali who transformed through fitness.",
+    descriptionNe: "Fitness मार्फत रूपान्तरण भएको नेपाली युवाको प्रेरणादायी कथा।",
+    category: "Fitness Champions",
+    duration: "20 min",
+    date: "2026-01-22",
+    audioUrl: "#",
+  },
+  {
+    id: "ep3-startup-nepal",
+    title: "Digital Entrepreneurs of Nepal",
+    titleNe: "नेपालका डिजिटल उद्यमी",
+    description: "Stories of young entrepreneurs building digital businesses in Nepal.",
+    descriptionNe: "नेपालमा डिजिटल व्यापार बनाइरहेका युवा उद्यमीहरूका कथाहरू।",
+    category: "Entrepreneurs",
+    duration: "30 min",
+    date: "2026-02-01",
+    audioUrl: "#",
+  },
+  {
+    id: "ep4-ai-tools-mastery",
+    title: "Mastering AI Tools for Daily Use",
+    titleNe: "दैनिक प्रयोगका लागि AI Tools महारत",
+    description: "Practical guide to using AI tools in everyday work.",
+    descriptionNe: "दैनिक काममा AI tools प्रयोग गर्ने व्यावहारिक मार्गदर्शन।",
+    category: "AI Learners",
+    duration: "22 min",
+    date: "2026-02-10",
+    audioUrl: "#",
+  },
+];
