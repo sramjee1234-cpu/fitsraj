@@ -129,16 +129,26 @@ function TopLinks() {
   const { t } = useLanguage();
 
   return (
-    <div className="flex items-center gap-3">
-      <Link href="/about" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
-        👤 {t("About", "About")}
-      </Link>
-      <Link href="/chat-me" className="flex items-center gap-1.5 rounded-lg bg-highlight px-3 py-2 text-sm text-white transition-colors hover:bg-highlight/90">
-        💬 {t("Chat Bot", "Chat Bot")}
-      </Link>
-      <Link href="/contact" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
-        📧 {t("Contact", "Contact")}
-      </Link>
+    <div className="flex flex-col items-end gap-3">
+      <div className="flex items-center gap-3">
+        <Link href="/about" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
+          👤 {t("About", "About")}
+        </Link>
+        <Link href="/chat-me" className="flex items-center gap-1.5 rounded-lg bg-highlight px-3 py-2 text-sm text-white transition-colors hover:bg-highlight/90">
+          💬 {t("Chat Bot", "Chat Bot")}
+        </Link>
+        <Link href="/contact" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
+          📧 {t("Contact", "Contact")}
+        </Link>
+      </div>
+      <div className="flex items-center gap-3">
+        <Link href="/ai-photo-prompts" className="flex items-center gap-1.5 rounded-lg bg-purple-500 px-3 py-2 text-sm text-white transition-colors hover:bg-purple-600">
+          📸 {t("AI Prompts", "AI Prompts")}
+        </Link>
+        <Link href="/shop" className="flex items-center gap-1.5 rounded-lg bg-green-500 px-3 py-2 text-sm text-white transition-colors hover:bg-green-600">
+          🛒 {t("Health Store", "Health Store")}
+        </Link>
+      </div>
     </div>
   );
 }
