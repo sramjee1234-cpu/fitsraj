@@ -43,6 +43,8 @@ export const NAV_ITEMS_NE = [
   { label: "Home", href: "/" },
   { label: "AI Learning", href: "/ai-learning" },
   { label: "AI Tools", href: "/ai-tools" },
+  { label: "📸 AI Photo Prompts", href: "/ai-photo-prompts" },
+  { label: "🏥 Health Store", href: "/shop" },
   { label: "Free eBooks", href: "/free-ebooks" },
   { label: "Free Courses", href: "/free-courses" },
   { label: "Fitness", href: "/fitness" },
@@ -51,12 +53,15 @@ export const NAV_ITEMS_NE = [
   { label: "AI Ghar-Dailo", href: "/ai-ghar-dailo" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "🔧 Admin", href: "/admin" },
 ];
 
 export const NAV_ITEMS_EN = [
   { label: "Home", href: "/" },
   { label: "AI Learning", href: "/ai-learning" },
   { label: "AI Tools", href: "/ai-tools" },
+  { label: "📸 AI Photo Prompts", href: "/ai-photo-prompts" },
+  { label: "🏥 Health Store", href: "/shop" },
   { label: "Free eBooks", href: "/free-ebooks" },
   { label: "Free Courses", href: "/free-courses" },
   { label: "Fitness", href: "/fitness" },
@@ -65,4 +70,5 @@ export const NAV_ITEMS_EN = [
   { label: "AI Ghar-Dailo", href: "/ai-ghar-dailo" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "🔧 Admin", href: "/admin" },
 ];
