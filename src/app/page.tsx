@@ -412,11 +412,11 @@ export default function HomePage() {
             >
               {t("AI Learning सुरु गर्नुहोस्", "Start AI Learning")}
             </Link>
-          </div>
+                    </div>
         </div>
       </section>
     </div>
   );
 }
- 
- 
+
+

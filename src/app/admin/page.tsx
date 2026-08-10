@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -37,8 +38,6 @@ export default function AdminPage() {
   const [prompts, setPrompts] = useState<PhotoPrompt[]>([]);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [editingPrompt, setEditingPrompt] = useState<PhotoPrompt | null>(null);
-  const [showAddProduct, setShowAddProduct] = useState(false);
-  const [showAddPrompt, setShowAddPrompt] = useState(false);
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -79,7 +78,6 @@ export default function AdminPage() {
       link: "https://hamrobazaar.com",
     };
     setProducts([...products, newProduct]);
-    setShowAddProduct(false);
   };
 
   const deleteProduct = (id: number) => {
@@ -96,7 +94,6 @@ export default function AdminPage() {
       prompts: ["Your prompt here"],
     };
     setPrompts([...prompts, newPrompt]);
-    setShowAddPrompt(false);
   };
 
   const deletePrompt = (id: number) => {
@@ -142,9 +139,9 @@ export default function AdminPage() {
             <button onClick={saveChanges} className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700">
               💾 Save Changes
             </button>
-            <a href="/" className="rounded-lg border px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50">
+            <Link href="/" className="rounded-lg border px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50">
               ← Website
-            </a>
+            </Link>
           </div>
         </div>
       </div>
