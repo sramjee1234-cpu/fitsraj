@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface PhotoPrompt {
@@ -10,9 +10,10 @@ interface PhotoPrompt {
   emoji: string;
   bgColor: string;
   prompts: string[];
+  image?: string;
 }
 
-const photoPrompts: PhotoPrompt[] = [
+const defaultPrompts: PhotoPrompt[] = [
   {
     id: 1,
     title: "सुन्दर प्राकृतिक दृश्य",
@@ -131,6 +132,15 @@ export default function AIPhotoPromptsPage() {
   const { t } = useLanguage();
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [copiedPrompt, setCopiedPrompt] = useState<string | null>(null);
+  const [photoPrompts, setPhotoPrompts] = useState<PhotoPrompt[]>(defaultPrompts);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("fitsraj_prompts");
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (parsed.length > 0) setPhotoPrompts(parsed);
+    }
+  }, []);
 
   const handleCopy = (prompt: string) => {
     navigator.clipboard.writeText(prompt);
@@ -171,7 +181,11 @@ export default function AIPhotoPromptsPage() {
             >
               {/* Photo Preview */}
               <div className={`flex h-48 items-center justify-center bg-gradient-to-br ${item.bgColor}`}>
-                <span className="text-8xl">{item.emoji}</span>
+                {item.image ? (
+                  <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                ) : (
+                  <span className="text-8xl">{item.emoji}</span>
+                )}
               </div>
 
               {/* Title */}
