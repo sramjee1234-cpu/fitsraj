@@ -50,48 +50,50 @@ function BirthdayCalculator() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-pink-50 to-purple-50 py-3">
+    <section className="bg-gradient-to-r from-pink-50 to-purple-50 py-4">
       <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-xl bg-white p-3 shadow-sm">
-          <div className="flex flex-col items-center gap-2 sm:flex-row">
-            <span className="text-base">📅</span>
+        <div className="rounded-xl bg-white p-4 shadow-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg">📅</span>
             <h2 className="text-sm font-bold text-gray-900">
               {t("मेरो उमेर गणना", "My Age Calculator")}
             </h2>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
             <input
               type="date"
               value={birthDate}
               onChange={(e) => setBirthDate(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20 sm:w-auto"
+              className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20"
             />
             <button
               onClick={calculateAge}
-              className="rounded-lg bg-highlight px-3 py-1.5 text-xs font-semibold text-white transition-all hover:bg-highlight/90"
+              className="rounded-lg bg-highlight px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-highlight/90"
             >
-              {t("गणना", "Calc")}
+              {t("गणना गर्नुहोस्", "Calculate")}
             </button>
           </div>
           {result && (
-            <div className="mt-2 grid grid-cols-5 gap-1.5">
-              <div className="rounded-lg bg-blue-50 p-1.5 text-center">
-                <div className="text-lg font-bold text-blue-600">{result.years}</div>
-                <div className="text-[10px] text-gray-500">{t("बर्ष", "Y")}</div>
+            <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5">
+              <div className="rounded-lg bg-blue-50 p-3 text-center">
+                <div className="text-xl font-bold text-blue-600">{result.years}</div>
+                <div className="text-xs text-gray-500">{t("बर्ष (Years)", "Years")}</div>
               </div>
-              <div className="rounded-lg bg-green-50 p-1.5 text-center">
-                <div className="text-lg font-bold text-green-600">{result.months}</div>
-                <div className="text-[10px] text-gray-500">{t("महिना", "M")}</div>
+              <div className="rounded-lg bg-green-50 p-3 text-center">
+                <div className="text-xl font-bold text-green-600">{result.months}</div>
+                <div className="text-xs text-gray-500">{t("महिना (Months)", "Months")}</div>
               </div>
-              <div className="rounded-lg bg-orange-50 p-1.5 text-center">
-                <div className="text-lg font-bold text-orange-600">{result.days}</div>
-                <div className="text-[10px] text-gray-500">{t("दिन", "D")}</div>
+              <div className="rounded-lg bg-orange-50 p-3 text-center">
+                <div className="text-xl font-bold text-orange-600">{result.days}</div>
+                <div className="text-xs text-gray-500">{t("दिन (Days)", "Days")}</div>
               </div>
-              <div className="rounded-lg bg-purple-50 p-1.5 text-center">
-                <div className="text-lg font-bold text-purple-600">{result.totalWeeks.toLocaleString()}</div>
-                <div className="text-[10px] text-gray-500">{t("हप्ता", "W")}</div>
+              <div className="rounded-lg bg-purple-50 p-3 text-center">
+                <div className="text-xl font-bold text-purple-600">{result.totalWeeks.toLocaleString()}</div>
+                <div className="text-xs text-gray-500">{t("हप्ता (Weeks)", "Weeks")}</div>
               </div>
-              <div className="rounded-lg bg-pink-50 p-1.5 text-center">
-                <div className="text-lg font-bold text-pink-600">{result.totalDays.toLocaleString()}</div>
-                <div className="text-[10px] text-gray-500">{t("जम्मा", "T")}</div>
+              <div className="rounded-lg bg-pink-50 p-3 text-center">
+                <div className="text-xl font-bold text-pink-600">{result.totalDays.toLocaleString()}</div>
+                <div className="text-xs text-gray-500">{t("जम्मा दिन", "Total Days")}</div>
               </div>
             </div>
           )}
