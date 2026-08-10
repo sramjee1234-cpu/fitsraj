@@ -303,3 +303,29 @@ body {
   0%, 60%, 100% { transform: translateY(0); }
   30% { transform: translateY(-8px); }
 }
+
+/* Mobile Friendly */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile text sizes */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+}
+
+/* Mobile safe area */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
