@@ -13,7 +13,9 @@ import {
 
 function BirthdayCalculator() {
   const { t } = useLanguage();
-  const [birthDate, setBirthDate] = useState("");
+  const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
   const [result, setResult] = useState<{
     years: number;
     months: number;
@@ -23,8 +25,8 @@ function BirthdayCalculator() {
   } | null>(null);
 
   const calculateAge = () => {
-    if (!birthDate) return;
-    const birth = new Date(birthDate);
+    if (!day || !month || !year) return;
+    const birth = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
     const today = new Date();
 
     let years = today.getFullYear() - birth.getFullYear();
@@ -59,16 +61,39 @@ function BirthdayCalculator() {
               {t("मेरो उमेर गणना", "My Age Calculator")}
             </h2>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-            <input
-              type="date"
-              value={birthDate}
-              onChange={(e) => setBirthDate(e.target.value)}
-              className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20"
-            />
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-2">
+              <input
+                type="number"
+                placeholder="YYYY"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
+                min="1900"
+                max="2099"
+                className="w-1/3 rounded-lg border border-gray-200 px-3 py-2 text-sm text-center focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20"
+              />
+              <input
+                type="number"
+                placeholder="MM"
+                value={month}
+                onChange={(e) => setMonth(e.target.value)}
+                min="1"
+                max="12"
+                className="w-1/3 rounded-lg border border-gray-200 px-3 py-2 text-sm text-center focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20"
+              />
+              <input
+                type="number"
+                placeholder="DD"
+                value={day}
+                onChange={(e) => setDay(e.target.value)}
+                min="1"
+                max="31"
+                className="w-1/3 rounded-lg border border-gray-200 px-3 py-2 text-sm text-center focus:border-highlight focus:outline-none focus:ring-1 focus:ring-highlight/20"
+              />
+            </div>
             <button
               onClick={calculateAge}
-              className="rounded-lg bg-highlight px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-highlight/90"
+              className="w-full rounded-lg bg-highlight px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-highlight/90"
             >
               {t("गणना गर्नुहोस्", "Calculate")}
             </button>
@@ -414,7 +439,7 @@ export default function HomePage() {
             >
               {t("AI Learning सुरु गर्नुहोस्", "Start AI Learning")}
             </Link>
-                    </div>
+          </div>
         </div>
       </section>
     </div>
