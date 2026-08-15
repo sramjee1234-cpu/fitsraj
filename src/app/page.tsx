@@ -330,7 +330,7 @@ export default function HomePage() {
               )}
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-7">
+          <div className="mt-10 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-8">
             {[
               { name: "ChatGPT", url: "https://chatgpt.com", logo: "https://cdn.oaistatic.com/assets/favicon-o.svg" },
               { name: "Gemini", url: "https://gemini.google.com", logo: "https://www.gstatic.com/images/branding/product/1x/gemini_48dp.png" },
@@ -339,6 +339,7 @@ export default function HomePage() {
               { name: "InShot", url: "https://inshot.com", logo: "https://play-lh.googleusercontent.com/JvK1wJyDMKsKF5M8AqKmSNtMiPXR13MnOuHAPnKkBxPmLYa0wDE0vAPJkCBjJUz3ObaA" },
               { name: "Canva", url: "https://canva.com", logo: "https://static.canva.com/static/images/favicon-1.ico" },
               { name: "Claude", url: "https://claude.ai", logo: "https://claude.ai/images/claude_app_icon.png" },
+              { name: "Suno", url: "https://suno.com", logo: "https://suno.com/favicon.ico" },
             ].map((tool) => (
               <a
                 key={tool.name}
