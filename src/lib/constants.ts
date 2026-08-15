@@ -35,7 +35,7 @@ export const SUNO_URL =
 export const YOUTUBE_URL =
   process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@fitsrajofficial";
 export const FACEBOOK_URL =
-  process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://facebook.com/fitsraj";
+  process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/share/1FQdEsASto/";
 export const TIKTOK_URL =
   process.env.NEXT_PUBLIC_TIKTOK_URL || "https://tiktok.com/@fitsraj";
 
