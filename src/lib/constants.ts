@@ -34,6 +34,8 @@ export const SUNO_URL =
 // Social Media URLs
 export const YOUTUBE_URL =
   process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@fitsrajofficial";
+export const INSTAGRAM_URL =
+  process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=h94nsgl";
 export const FACEBOOK_URL =
   process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/share/1FQdEsASto/";
 export const TIKTOK_URL =
