@@ -302,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* Grace Community */}
-      <section className="bg-white py-4">
+      <section className="bg-white py-4 mt-2">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <a href="https://www.gracecommunity.world/ref/22404e1c4a" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 text-sm font-medium text-white shadow-md transition-all hover:shadow-lg hover:scale-105">
