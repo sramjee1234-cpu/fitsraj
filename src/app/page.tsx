@@ -283,6 +283,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Mobile About/Contact - Bottom */}
+      <section className="lg:hidden bg-gradient-to-br from-primary via-secondary to-accent py-4">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex items-center justify-center gap-3">
+            <Link href="/about" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
+              👤 {t("About", "About")}
+            </Link>
+            <Link href="/chat-me" className="flex items-center gap-1.5 rounded-lg bg-highlight px-4 py-2 text-sm text-white transition-colors hover:bg-highlight/90">
+              💬 {t("Chat Bot", "Chat Bot")}
+            </Link>
+            <Link href="/contact" className="flex items-center gap-1.5 rounded-lg bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20">
+              📧 {t("Contact", "Contact")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Social Links - Top */}
       <section className="bg-white py-4 border-b border-gray-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -332,14 +349,14 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-8">
             {[
-              { name: "ChatGPT", url: "https://chatgpt.com", logo: "https://cdn.oaistatic.com/assets/favicon-o.svg" },
-              { name: "Gemini", url: "https://gemini.google.com", logo: "https://www.gstatic.com/images/branding/product/1x/gemini_48dp.png" },
-              { name: "NotebookLM", url: "https://notebooklm.google.com", logo: "https://fonts.gstatic.com/s/i/short-term/release/notebooklm/favicon/256px.png" },
-              { name: "Google Flow", url: "https://flow.google.com", logo: "https://fonts.gstatic.com/s/i/short-term/release/flow/favicon/256px.png" },
-              { name: "InShot", url: "https://inshot.com", logo: "https://play-lh.googleusercontent.com/JvK1wJyDMKsKF5M8AqKmSNtMiPXR13MnOuHAPnKkBxPmLYa0wDE0vAPJkCBjJUz3ObaA" },
-              { name: "Canva", url: "https://canva.com", logo: "https://static.canva.com/static/images/favicon-1.ico" },
-              { name: "Claude", url: "https://claude.ai", logo: "https://claude.ai/images/claude_app_icon.png" },
-              { name: "Suno", url: "https://suno.com", logo: "https://suno.com/favicon.ico" },
+              { name: "ChatGPT", url: "https://chatgpt.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/120px-ChatGPT_logo.svg.png" },
+              { name: "Gemini", url: "https://gemini.google.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/120px-Google_Gemini_logo.svg.png" },
+              { name: "NotebookLM", url: "https://notebooklm.google.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Google_NotebookLM_Logo.svg/120px-Google_NotebookLM_Logo.svg.png" },
+              { name: "Google Flow", url: "https://flow.google.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Google_Flow_Logo.svg/120px-Google_Flow_Logo.svg.png" },
+              { name: "InShot", url: "https://inshot.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/InShot_Logo.svg/120px-InShot_Logo.svg.png" },
+              { name: "Canva", url: "https://canva.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/120px-Canva_icon_2021.svg.png" },
+              { name: "Claude", url: "https://claude.ai", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Claude_AI_logo.svg/120px-Claude_AI_logo.svg.png" },
+              { name: "Suno", url: "https://suno.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Suno_AI_logo.svg/120px-Suno_AI_logo.svg.png" },
             ].map((tool) => (
               <a
                 key={tool.name}
